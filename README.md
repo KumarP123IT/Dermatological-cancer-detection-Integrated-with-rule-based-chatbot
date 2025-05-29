@@ -43,7 +43,9 @@ A web-based application that uses deep learning to detect skin diseases from upl
 ---
 
 ## 🖼️ Project Structure
+
 ```bash
+
 skin-disease-detection/
 ├── static/
 │ ├── css/
@@ -121,18 +123,14 @@ skin-disease-detection/
 
 ### 📈 Future Improvements
 
-    ✅ Add multilingual support in chatbot
+   ✅ Add multilingual support in chatbot
 
-    ✅ Expand dataset for more skin conditions
+   ✅ Expand dataset for more skin conditions
 
-    ✅ Deploy on cloud (Heroku / Render / AWS)
+   ✅ Deploy on cloud (Heroku / Render / AWS)
 
-    ✅ Mobile responsiveness improvements
+   ✅ Mobile responsiveness improvements
 
-
-### 🤝 Contributing
-
-    Contributions are welcome! Please fork the repository and submit a pull request. For major changes, please open an issue first to discuss the ideas.
 
 ### 🧪 Model Details
 
@@ -147,3 +145,8 @@ skin-disease-detection/
    - Frameworks Used: TensorFlow & Keras
 
    - Inference Time: Optimized for fast predictions (<1s)
+
+### 🤝 Contributing
+
+    Contributions are welcome! Please fork the repository and submit a pull request. For major changes, please open an issue first to discuss the ideas.
+
