@@ -77,24 +77,24 @@ skin-disease-detection/
 
 1. Clone the repository:
    ```bash
-   git clone ...
-   cd skin-disease-detection
+   git clone https://github.com/KumarP123IT/Dermatological-cancer-detection-Integrated-with-rule-based-chatbot.git
+   cd Dermatological-cancer-detection-Integrated-with-rule-based-chatbot
    ```
 
 2. Create and activate a virtual environment:
     ```bash 
-    python -m venv venv
+    python3 -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
 
 3. Install dependencies:
     ```bash
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
     ```
 
 4. Run the app:
     ```bash
-    python app.py
+    python3 app.py
     ```
 
 
