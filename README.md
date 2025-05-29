@@ -43,7 +43,7 @@ A web-based application that uses deep learning to detect skin diseases from upl
 ---
 
 ## 🖼️ Project Structure
-
+```bash
 skin-disease-detection/
 ├── static/
 │ ├── css/
@@ -60,7 +60,7 @@ skin-disease-detection/
 ├── app.py
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
