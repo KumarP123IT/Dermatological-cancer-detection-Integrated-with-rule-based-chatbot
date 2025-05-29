@@ -1,4 +1,4 @@
-# 🧬 Skin Disease Detection System
+# 🧬 Dermatological cancer detection intergrated with rule-based chatbot
 
 A web-based application that uses deep learning to detect skin diseases from uploaded images. The system also features a chatbot that provides additional information about detected diseases and related dermatological conditions.
 
