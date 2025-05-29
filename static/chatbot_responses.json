@@ -1,0 +1,79 @@
+{
+  "Melanoma": {
+    "symptoms": "Changes in existing moles, new pigmented or unusual-looking growths, asymmetry in moles, irregular borders, multiple colors, and an increase in size.",
+    "information": "Melanoma is a serious form of skin cancer that originates in the melanocytes, the cells that produce pigment. Early detection is crucial as it can quickly spread to other organs.",
+    "specialized_doctor": {
+      "name": "Dr. Rashmi Sarkar",
+      "hospital": "Maulana Azad Medical College, New Delhi",
+      "phone": "+91-11-23239271"
+    },
+    "recommended_treatments": "Surgical removal, Immunotherapy, Targeted therapy, Radiation therapy, Chemotherapy (for advanced cases).",
+    "hospitals": "AIIMS Delhi, Tata Memorial Hospital Mumbai, Apollo Hospitals Chennai."
+  },
+  "Nevus": {
+    "symptoms": "Usually asymptomatic. Changes in size, shape, or color of the mole should be evaluated by a doctor.",
+    "information": "A nevus (plural nevi) is a benign growth of melanocytes. While most are harmless, atypical changes can signal potential malignancy like melanoma.",
+    "specialized_doctor": {
+      "name": "Dr. Ramesh Bhat",
+      "hospital": "Father Muller Medical College, Mangalore",
+      "phone": "+91-824-2238331"
+    },
+    "recommended_treatments": "Observation, Surgical excision if suspicious or cosmetically bothersome.",
+    "hospitals": "Manipal Hospital, Fortis Healthcare."
+  },
+  "Basal Cell Carcinoma": {
+    "symptoms": "Shiny bump or nodule, reddish patch, open sore that heals and re-opens, scar-like area.",
+    "information": "Basal Cell Carcinoma (BCC) is the most common form of skin cancer, arising from basal cells in the epidermis. It rarely spreads but can cause significant local damage if untreated.",
+    "specialized_doctor": {
+      "name": "Dr. Satish Bhatia",
+      "hospital": "Dr. Bhatia's Medical Center, Mumbai",
+      "phone": "+91-22-23679161"
+    },
+    "recommended_treatments": "Surgical excision, Mohs micrographic surgery, Cryotherapy, Topical medications, Radiation therapy (rare cases).",
+    "hospitals": "Tata Memorial Hospital Mumbai, Kokilaben Dhirubhai Ambani Hospital."
+  },
+  "Actinic Keratosis": {
+    "symptoms": "Rough, dry, or scaly patches, usually on sun-exposed areas. Sometimes itchy, burning, or tender.",
+    "information": "Actinic Keratosis (AK) is a precancerous skin lesion caused by long-term sun exposure. If untreated, it can progress to Squamous Cell Carcinoma.",
+    "specialized_doctor": {
+      "name": "Dr. Rohit Batra",
+      "hospital": "Sir Ganga Ram Hospital, New Delhi",
+      "phone": "+91-11-42254000"
+    },
+    "recommended_treatments": "Cryotherapy, Topical chemotherapy creams, Photodynamic therapy, Laser therapy.",
+    "hospitals": "Sir Ganga Ram Hospital Delhi, Medanta The Medicity Gurgaon."
+  },
+  "Benign Keratosis": {
+    "symptoms": "Waxy, stuck-on lesions that are brown, black, or tan. May appear wart-like but are harmless.",
+    "information": "Benign Keratosis includes conditions like Seborrheic Keratosis, which are noncancerous skin growths common in older adults. They are mainly cosmetic concerns.",
+    "specialized_doctor": {
+      "name": "Dr. Rashmi Shetty",
+      "hospital": "Ra Skin and Aesthetics, Mumbai",
+      "phone": "+91-22-26423333"
+    },
+    "recommended_treatments": "No treatment required unless for cosmetic reasons; removal by cryotherapy, curettage, or laser therapy.",
+    "hospitals": "Local dermatology clinics, Kaya Skin Clinic."
+  },
+  "Squamous Cell Carcinoma": {
+    "symptoms": "Firm, red nodule; a flat sore with a scaly crust; a new sore or raised area on an old scar or ulcer; a rough, scaly patch.",
+    "information": "Squamous Cell Carcinoma (SCC) is the second most common form of skin cancer. It arises from squamous cells and can metastasize if not caught early.",
+    "specialized_doctor": {
+      "name": "Dr. Vikas Halwai",
+      "hospital": "Tata Memorial Hospital, Mumbai",
+      "phone": "+91-22-24177000"
+    },
+    "recommended_treatments": "Surgical excision, Mohs surgery, Radiation therapy, Cryotherapy for early lesions, Immunotherapy (for advanced cases).",
+    "hospitals": "Tata Memorial Hospital Mumbai, Max Hospital Delhi."
+  },
+  "Dermatofibroma": {
+    "symptoms": "Firm, small, red-to-brown bumps that may be tender or itchy. Feels like a hard lump under the skin.",
+    "information": "Dermatofibroma is a benign fibrous nodule often caused by minor skin trauma. It does not turn cancerous and usually requires no treatment.",
+    "specialized_doctor": {
+      "name": "Dr. Seemal Desai",
+      "hospital": "Desai Skin Clinic, Bangalore",
+      "phone": "+91-80-41125356"
+    },
+    "recommended_treatments": "Observation, Surgical removal if bothersome or cosmetically undesirable.",
+    "hospitals": "Local dermatology clinics, Fortis La Femme Bangalore."
+  }
+}

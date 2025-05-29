@@ -1,0 +1,185 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <img src="{{ url_for('static', filename=image_path.split('static/')[1]) }}" alt="Uploaded Skin Image">
+        <h2>Disease: <span>{{ prediction }}</span></h2>
+        <h3>Confidence: {{ confidence }}%</h3>
+        <a href="/">Test Another Image</a>
+    </div>
+</body>
+</html>
+ -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <img src="{{ url_for('static', filename=image_path.split('static/')[1]) }}" alt="Uploaded Skin Image">
+        <h2>Disease: <span>{{ prediction }}</span></h2>
+        <h3>Confidence: {{ confidence }}%</h3>
+        
+        <div id="chatbot">
+            <button id="chatbot-toggler"><i class="fas fa-robot"></i></button>
+            <div id="chatbot-window">
+                <div id="chatbot-header">Chat with SkinBot</div>
+                <div id="chatbot-body"></div>
+                <div id="chatbot-input-area">
+                    <select id="question-type">
+                        <option value="symptoms">what are the Symptoms</option>
+                        <option value="hospitals">what are the Information about it</option>
+                        <option value="specialized_doctor" >what are the hospitals and doctor are specialized for this cancer  </option>
+                    </select>
+                    <button onclick="askQuestion()">Ask</button>
+                </div>
+            </div>
+        </div>
+        
+        <a href="/">Test Another Image</a>
+    </div>
+    <footer>
+        <p>&copy; 2025 Skin Disease Detection. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById('chatbot-toggler').addEventListener('click', function() {
+            const chatbotWindow = document.getElementById('chatbot-window');
+            chatbotWindow.style.display = chatbotWindow.style.display === 'block' ? 'none' : 'block';
+        });
+
+        function askQuestion() {
+            const questionType = document.getElementById('question-type').value;
+            fetch('/chatbot', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ disease: "{{ prediction }}", question_type: questionType }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                const chatbotBody = document.getElementById('chatbot-body');
+                chatbotBody.innerHTML += `<p><strong>You:</strong> What are the ${questionType} of {{ prediction }}?</p>`;
+                chatbotBody.innerHTML += `<p><strong>SkinBot:</strong> ${data.response}</p>`;
+            });
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Prediction Result</h1>
+        <div class="image-section">
+            <img src="{{ url_for('static', filename=image_path.split('static/')[1]) }}" alt="Uploaded Skin Image">
+        </div>
+        <div class="result-section">
+            <h2>Disease Detected: <span>{{ prediction }}</span></h2>
+            <h3>Confidence Score: {{ confidence }}%</h3>
+            <a href="/" class="btn">🔄 Test Another Image</a>
+        </div>
+
+        <!-- Chatbot Section -->
+        <div id="chatbot">
+            <button id="chatbot-toggler" title="Chat with SkinBot">
+                <i class="fas fa-robot"></i>
+            </button>
+
+            <div id="chatbot-window" style="display: none;">
+                <div id="chatbot-header">🤖 Chat with SkinBot</div>
+                <div id="chatbot-body" class="chatbot-body"></div>
+
+                <div id="chatbot-input-area">
+                    <select id="question-type">
+                        <option value="symptoms">Symptoms of this disease</option>
+                        <option value="hospitals">Information about this disease</option>
+                        <option value="specialized_doctor">Specialized Doctors and Hospitals</option>
+                        <option value="recommended_treatments">Recommended Treatments</option>
+                    </select>
+                    <button onclick="askQuestion()">Ask</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Skin Disease Detection. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle chatbot visibility
+        document.getElementById('chatbot-toggler').addEventListener('click', function() {
+            const chatbotWindow = document.getElementById('chatbot-window');
+            chatbotWindow.style.display = chatbotWindow.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Send question to backend
+        function askQuestion() {
+            const questionType = document.getElementById('question-type').value;
+            const chatbotBody = document.getElementById('chatbot-body');
+
+            // Show user message
+            chatbotBody.innerHTML += `<div class="user-message"><strong>You:</strong> What are the ${questionType.replace('_', ' ')} of {{ prediction }}?</div>`;
+
+            fetch('/chatbot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ disease: "{{ prediction }}", question_type: questionType }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                chatbotBody.innerHTML += `<div class="bot-message"><strong>SkinBot:</strong> ${data.response}</div>`;
+                chatbotBody.scrollTop = chatbotBody.scrollHeight; // Auto-scroll
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                chatbotBody.innerHTML += `<div class="bot-message error"><strong>SkinBot:</strong> Sorry, something went wrong!</div>`;
+            });
+        }
+    </script>
+</body>
+</html>
